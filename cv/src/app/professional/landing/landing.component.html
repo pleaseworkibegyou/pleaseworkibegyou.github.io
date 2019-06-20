@@ -1,3 +1,193 @@
-<p>
- Professional landing works!
-</p>
+<ng-template #t let-fill="fill">
+    <span class="star" [class.full]="fill === 100">
+      <span class="half" [style.width.%]="fill">&hearts;</span>&hearts; 
+    </span>
+  </ng-template>
+<mat-drawer-container class="example-container">
+    <!-- Inside Drawer -->
+    <mat-drawer id="sideNav" #sideNav mode="push" opened="false" class="Refinery-29-Salary-Stories-5-rgba" style=" position:fixed;">
+        <div class="container-fluid">
+            <div (click)="goToElement('top') ; sideNav.toggle()"  class="row" style="background-color: chartreuse" >
+                <h2>Krids</h2>
+            </div>
+            <ul id="navList" style="list-style-type:none; padding-left: 0px">
+                <li (click)="goToElement('top'); sideNav.toggle()">
+                    About Me
+                </li>
+                <mat-divider></mat-divider>
+                <li (click)="goToElement('SkillsID'); sideNav.toggle()">
+                    Skills & Education
+                </li>
+                <mat-divider></mat-divider>
+                <li (click)="goToElement('ProjectID'); sideNav.toggle()">
+                    Projects
+                </li>
+                <mat-divider></mat-divider>
+                <a href="https://www.linkedin.com/in/kridtin-sanardhan-profile/">
+                <li>
+                    LinkedIn
+                </li>
+                </a>
+                <mat-divider></mat-divider>
+            </ul>
+        </div>
+    </mat-drawer>
+    <!-- page content -->
+    <mat-drawer-content class="">
+        <div id="top" class="container-fluid">
+            <div class="row Refinery-29-Salary-Stories-1-rgba">
+                <div class="col-lg-12 d-flex justify-content-center" style="height: 40vh; padding-top: 3vh;">
+                    <img src="../../../assets/profilePolite.jpg" style="height: inherit; width: auto; border-style: solid; border-color:black; border-style: 0.3em " class=" rounded-circle">
+                </div>
+                <div class="col-lg-12 d-flex flex-column" style="padding-top: 3vh">
+                    <div class="row justify-content-center headerParagraph">
+                        <h3 (click)="sideNav.toggle()">Kirdtin Sanardhan</h3>                        
+                    </div> 
+                    <br>
+                    <div class="row justify-content-center headerParagraph">
+                        <p style="text-align: center">Fresh graduate from Codecamp#3: Full-stack Developer. Currently looking for a position as a Web Developer</p>                        
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row Refinery-29-Salary-Stories-2-rgba">
+                <div class="col-lg-12 d-flex flex-column" style="padding-top: 4vh; padding-bottom:7vh ">
+                    <div class="row">
+                    </div>
+                    <div class="row" style="justify-content: flex-end">
+                    <div class="col-lg-6 col-md-12">
+                        <h3 style="text-align: right">Academic Background</h3>
+                        <br>
+                        <ul style="direction:rtl; text-align: right">
+                            <li>
+                                Kasetsart University <br>
+                                Faculty of Economics | MAY 2017
+                            </li> <br>
+                            <li>
+                                CodeCamp#3 : Full-Stack Developer <br>
+                                Software Park Thailand & Thai Programmer Association <br>
+                                April 2019 - Present 
+                            </li> <br>
+                            <li>
+                                Toeic : 990 <br>
+                                May 2018
+                            </li> <br>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                            <h3 id="SkillsID">Skills</h3>    
+                    <ul>
+                        <li>HTML 
+                            <ngb-rating [rate]="3.5" [starTemplate]="t" [readonly]="true" max="5"></ngb-rating></li>
+                        <li>Javascript
+                            <ngb-rating [rate]="3.5" [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
+                        </li>
+                        <li>CSS
+                            <ngb-rating [rate]="3.5" [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
+                        </li>
+                        <li>bootstrap
+                            <ngb-rating [rate]="3.75" [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
+                        </li>
+                        <li>Angular
+                            <ngb-rating [rate]="4.3" [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
+                        </li>
+                        <li>TypeScript
+                            <ngb-rating [rate]="4" [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
+                        </li>
+                        <li>Java
+                            <ngb-rating [rate]="3" [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
+                        </li>
+                        <li>Spring Framework
+                            <ngb-rating [rate]="2" [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
+                        </li>
+                        <li>Google Cloud Platform
+                            <ngb-rating [rate]="1" [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
+                        </li>
+                    </ul>
+                </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row Refinery-29-Salary-Stories-1-rgba">
+                <div class="col-lg-12 col-md-12 d-flex justify-content-center">
+                    <div class="row" style="padding: 1em; background-color: white; margin-top: -2em; height: fit-content;margin-bottom: 10vh">
+                        
+                    <div>
+                        <h1 id="ProjectID" style="">Projects</h1>
+                    </div>
+                    
+                </div>
+
+                </div>
+                <div class="col-lg-12 col-md-12 d-flex flex-column justify-content-center" style="color: white">
+                    <div class="row projectFrame" >
+                            <div class="col-lg-12 col-md-12 d-flex justify-content-center projectHeaderFrame">
+                                <h2>This Page</h2>
+                            </div>
+                            <div class="col-lg-6 col-md-12 d-flex justify-content-center">
+                               <ul>
+                                   <li>
+                                       Built using Angular
+                                   </li>
+                                   <li>
+                                       Lazy loaded each page for better performance
+                                   </li>
+                                   <li>
+                                       also uses Material design
+                                   </li>
+                                   <li>
+                                       Source code available here: <a href="https://github.com/pleaseworkibegyou/pleaseworkibegyou.github.io">Link</a>
+                                   </li>
+                               </ul> 
+                            </div>
+                            <div class="col-lg-6 col-md-12 d-flex justify-content-center">
+                                <img class="projectImg" src="../../../assets/webpreview.PNG">
+                            </div>
+                    </div>
+                    <div class="row projectFrame">
+                        <div class="col-lg-12 col-md-12 d-flex justify-content-center projectHeaderFrame" >
+                            <h2>Internship Project at Quark Systems</h2>
+                        </div>
+                        <div class="col-lg-6 col-md-12 d-flex justify-content-center ">
+                            <ul>
+                                <li>
+                                    Built using Angular and few others Open source JS library
+                                </li>
+                                <li>
+                                    Web application for Calculating small pieces measurement in car manufacturing factory
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 col-md-12 d-flex justify-content-center">
+                                <img class="projectImg" src="../../../assets/sizecal.PNG">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div (click)="sideNav.toggle()" id="navBall">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer style="background-color: gray; padding: 3vh">
+                <div class="container-fluid">
+                  <div class="row">
+                      <div class="col-lg-12 col-md-12 d-flex flex-column">
+                          <div class="row justify-content-center">
+                              <a href="https://www.facebook.com/butter12th" ><img style="height: 1em; width: auto;" src="../../../assets/fb.png"></a>
+                              &nbsp;
+                              <a href="https://github.com/pleaseworkibegyou/pleaseworkibegyou.github.io" ><img style="height: 1em; width: auto;" src="../../../assets/github.png"></a>
+                          </div>
+                          <div class="row justify-content-center">
+                                  Made with <span style="color: #e25555;">&hearts;</span> By Kridtin Sanardhan
+                          </div>
+                      </div>
+                  </div>
+                </div>
+            </footer>
+    </mat-drawer-content>
+  </mat-drawer-container>
+  

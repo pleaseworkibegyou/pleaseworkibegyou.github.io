@@ -1,0 +1,93 @@
+.Refinery-29-Salary-Stories-1-rgba { background-color: rgba(36, 92, 165, 1); }
+.Refinery-29-Salary-Stories-2-rgba { background-color: rgba(242, 159, 4, 1); }
+.Refinery-29-Salary-Stories-3-rgba { color: rgba(242, 208, 179, 1); }
+.Refinery-29-Salary-Stories-4-rgba { background-color: rgba(191, 110, 63, 1); }
+.Refinery-29-Salary-Stories-5-rgba { background-color: rgba(191, 49, 17, 1); }
+
+.headerParagraph{
+    color:white;
+}
+
+.star {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #d3d3d3;
+  }
+  .full {
+    color: red;
+  }
+  .half {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    color: red;
+  }
+
+  #navList li{
+    padding: 3vh;
+    color: white;
+  }
+
+  #navBall{
+
+    display: flex;
+    height: 3em;
+    width: 3em;
+    background-color: black;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 3000;
+    bottom: 5em;
+    right: 2em;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .projectFrame{
+      margin-left: 8vw;
+      margin-right: 8vw;
+      margin-bottom: 20vh;
+      padding-top: 10vh;
+      padding-bottom: 10vh;
+      background-color: white;
+      color:black;
+  }
+
+  .projectHeaderFrame{
+    background-color: black;
+    padding-bottom: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    padding-top: 30px;
+    margin-bottom: 100px;
+  }
+
+  .bar{
+    width: 60%;
+    height: 5px;
+    background-color: white;
+    transition: 0.4s;
+    margin-top: 7px;
+  }
+
+  .projectImg{
+      width: inherit;
+      height: 400px;
+  }
+  @media  (max-width: 600px) {
+  .projectImg{
+    width: inherit;
+  }
+  .projectFrame{
+    margin-bottom: 5vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+  .projectHeaderFrame{
+    margin-bottom: 2vh;
+  }
+}

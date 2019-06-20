@@ -1,11 +1,16 @@
-<div class="container-fluid">
+
+
+<div id="firstLandingPage" class="container-fluid">
   <div class="row">
     <div class="col justify-content-center">
-      <div class="centered">
+      <div class="centered" style="width: 100%; background-color: rgba(247, 250, 255, 0.2)">
       <h2 style="text-align: center; color: #737373"  >Kridtin Sanardhan</h2>
-      <div  class="d-flex flex-row justify-content-between" style="color: #BFBFBF" >
-        <p routerLink="/Professional" (mouseover)="changeBg('Professional')" (mouseleave)="changeBg('')">Professional</p>
-        <p routerLink="/Personal" (mouseover)="changeBg('personal')" (mouseleave)="changeBg('')">Personal</p>
+      <div  class="d-flex flex-row justify-content-center">
+
+        <a routerLink="/Professional" (mouseover)="changeBg('Professional')" (mouseleave)="changeBg('')" (click)="pageChange()" style="color: #BFBFBF"><p>Professional</p></a>
+        &nbsp;&nbsp;
+        <a routerLink="/Personal" (mouseover)="changeBg('personal')" (mouseleave)="changeBg('')"   (click)="pageChange()" style="color: #BFBFBF"><p>Personal</p></a>
+
       </div>
     </div>
     </div>
